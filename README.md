@@ -5,7 +5,7 @@ Convenience layer for my exercism integration
 <!-- toc -->
 
 - [Description](#description)
-- [Dependencies](#dependencies)
+- [Setup](#setup)
 - [License](#license)
 - [Author Information](#author-information)
 
@@ -22,9 +22,13 @@ What it does:
 - enable bash completion for exercism
 - wrap gpg-encrypted configuration decryption at exercism-cli runtime
 
-## Integration
+## Setup
 
-I use the following snippet in my `~/.bash_profile`:
+Checkout this repo:
+
+`git clone https://github.com/pari-/exercism /dir/of/your/choice`
+
+Integrate into your `~/.bash_profile`:
 
 ```bash
 #
@@ -35,6 +39,9 @@ if [ -f "${EXERCISM_DIR}/config/bash_profile.sh" ]; then
   source "${EXERCISM_DIR}/config/bash_profile.sh" "${EXERCISM_DIR}"
 fi
 ```
+
+Replace `config/exercism.json.gpg` with your gpg-encrypted `exercism.json`-config
+file.
 
 ## License
 
