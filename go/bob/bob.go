@@ -14,14 +14,12 @@ func Hey(input string) string {
 	input = strings.TrimSpace(input)
 	if len(input) == 0 {
 		return "Fine. Be that way!"
-	} else {
-		endsWith := input[len(input)-1]
-		if strings.ToUpper(input) == input && strings.ContainsAny(input, "ABCDEFGHIJKLMNOPQRSTUVWXYZ") {
-			return "Whoa, chill out!"
-		} else if endsWith == '?' {
-			return "Sure."
-		} else {
-			return "Whatever."
-		}
 	}
+	endsWith := input[len(input)-1]
+	if strings.ToUpper(input) == input && strings.ContainsAny(input, "ABCDEFGHIJKLMNOPQRSTUVWXYZ") {
+		return "Whoa, chill out!"
+	} else if endsWith == '?' {
+		return "Sure."
+	}
+	return "Whatever."
 }
